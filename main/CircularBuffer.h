@@ -19,6 +19,8 @@ class CircularBuffer {
     // Creates an uninitialized buffer 
     CircularBuffer(); 
 
+    ~CircularBuffer(); 
+
     // Create and initilize a buffer of size `bufferSize`
     CircularBuffer(unsigned int bufferSize);
 
@@ -38,6 +40,11 @@ class CircularBuffer {
 
 template <typename T>
 CircularBuffer<T>::CircularBuffer(){
+}
+
+template <typename T>
+CircularBuffer<T>::~CircularBuffer(){
+    delete []_buffer;
 }
 
 template <typename T>
@@ -84,5 +91,8 @@ template <typename T>
 T CircularBuffer<T>::Sum(){
     return _bufferSum;
 }
+
+
+
 
 #endif  

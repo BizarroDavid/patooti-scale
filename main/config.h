@@ -1,6 +1,8 @@
 /************************ Adafruit IO Config *******************************/
 // visit io.adafruit.com if you need to create an account,
 // or if you need your Adafruit IO key.
+
+// Create your own "secrets.h" file and define the variable names below to get your device on your WIFI. 
 #include "secrets.h"
 #define IO_USERNAME SECRETS__IO_USERNAME
 #define IO_KEY      SECRETS__IO_KEY
