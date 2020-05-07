@@ -22,6 +22,7 @@ This project assumes the following hardware setup:
 
 The Arduino MKR1000 contains built in WiFI capabilities, however any internet enabled Arduino setup should work.
 
+See my [blog post](https://wordpress.com/post/strangeday.press/56) for more details on the physical assembly. 
 
 # Getting started 
 
