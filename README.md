@@ -75,6 +75,14 @@ See the last section here: https://github.com/Microsoft/vscode-arduino/issues/76
 
 ## How to add a new SSL cert to the Arduino MKR1000
 
-- load the firmware update sketch from the WiFI samples (in the Arduino IDE)
-- In the tools menu open the update prompt. You can add certificates from here. 
+- connect board to PC's USB port 
+- Launch the Adruino IDE (Not VSCode)
+- Upload onto the board the FirmwareUpdater sketch from the WiFI samples (in the Arduino IDE)
+- From the tools menu open the Wifi101/WifiNINNA Firmware Updater Tool
+- Remove domains from the box in section #3 (it will probably be arduino.cc:443)
+- Using the "Add domain" button and certificates for these URLs:  "arduino.cc", "io.adafruit.com"
+- Click "Upload Certificates to WiFi module" button.
+- Back in VSCode open up the Patooti Scale project (this project)
+- Press Ctrl+P then run the "Arduino: Upload" command 
+- Go this think link and verify that you start rec'ving data (may take up to 1 minute) https://io.adafruit.com/bizarrodavid/dashboards/patooti
 

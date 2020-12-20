@@ -3,6 +3,8 @@
         {
             "name": "Win32",
             "includePath": [
+                "C:\\Users\\dtorres\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\samd\\1.8.6\\**",
+                "C:\\Users\\dtorres\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\avr\\1.8.3\\**",
                 "${env:USERPROFILE}\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\**",
                 "${env:USERPROFILE}\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\samd\\1.8.5\\**",
                 "${env:USERPROFILE}\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\CMSIS-Atmel\\1.2.0\\CMSIS\\Device\\ATMEL\\same70\\include\\component\\**",
@@ -13,10 +15,9 @@
                 "C:\\Users\\dtorres\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\**"
             ],
             "forcedInclude": [
-                "${env:USERPROFILE}}\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\samd\\1.8.5\\cores\\arduino\\Arduino.h",
-                "${env:USERPROFILE}}\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\CMSIS-Atmel\\1.2.0\\CMSIS\\Device\\ATMEL\\same70\\include\\component\\spi.h",
-                "C:\\Users\\dtorres\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\samd\\1.8.5\\cores\\arduino\\Arduino.h"
-            ],            
+                "C:\\Users\\dtorres\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\samd\\1.8.6\\cores\\arduino\\Arduino.h",
+                "${env:USERPROFILE}}\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\CMSIS-Atmel\\1.2.0\\CMSIS\\Device\\ATMEL\\same70\\include\\component\\spi.h"
+            ],
             "compilerPath": "\"${env:USERPROFILE}\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\7-2017q4/bin/arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb -c -g -Os -w -std=gnu++11 -ffunction-sections -fdata-sections -fno-threadsafe-statics -nostdlib --param max-inline-insns-single=500 -fno-rtti -fno-exceptions -w -x c++ -E -CC -DF_CPU=48000000L -DARDUINO=10812 -DARDUINO_SAMD_MKR1000 -DARDUINO_ARCH_SAMD\"",
             "cStandard": "c11",
             "cppStandard": "c++17"

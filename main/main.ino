@@ -48,7 +48,7 @@ Stopwatch stopwatch;
 void setup() {    
   Serial.print("Patooti Scale v1.0.0");
   Serial.print("Starting up...");
-  LoadCell.begin();
+  LoadCell.begin();  
   LoadCell.start(LOAD_CELL_STARTUP_TIME);  
   LoadCell.setCalFactor(LOAD_CELL_CALIBRATION_FACTOR);
 
@@ -57,7 +57,7 @@ void setup() {
   // connect to io.adafruit.com
   io.connect();  
   while(io.status() < AIO_CONNECTED) {
-    Serial.print(".");
+    Serial.print(".");    
     delay(500);
   }
   Serial.println();
