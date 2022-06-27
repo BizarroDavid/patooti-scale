@@ -65,6 +65,15 @@ The software is layered as follows, starting from the lowest level:
 * Main: The main layer obtains these periodic measurements and pushed them up to your Adafruit.IO feed. 
 
 
+# Working in VS Code 
+
+Useful commands (Ctrl-P)
+- Open Serial Monitor
+- Upload 
+- Verify ##(builds your codes)##
+
+Keep VSCode open in Windows mode. You can keep your code in WSL.
+
 
 # Notes 
 
@@ -77,8 +86,9 @@ See the last section here: https://github.com/Microsoft/vscode-arduino/issues/76
 
 - connect board to PC's USB port 
 - Launch the Adruino IDE (Not VSCode)
-- Upload onto the board the FirmwareUpdater sketch from the WiFI samples (in the Arduino IDE)
-- From the tools menu open the Wifi101/WifiNINNA Firmware Updater Tool
+- Upload onto the board the FirmwareUpdater sketch from the WiFI samples (in the Arduino IDE)   
+    - Examples > Wifi101 > Firmware Updater. Then click upload button
+- From the tools menu open the Wifi101/WifiNINNA Firmware Updater Tool   
 - Remove domains from the box in section #3 (it will probably be arduino.cc:443)
 - Using the "Add domain" button and certificates for these URLs:  "arduino.cc", "io.adafruit.com"
 - Click "Upload Certificates to WiFi module" button.

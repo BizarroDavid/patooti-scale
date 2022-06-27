@@ -12,7 +12,7 @@
 /***   CONFIGURATION PARAMETERS ****/
 
 //send data up to adafruit?
-const bool SEND_TO_ADAFRUIT=true; 
+const bool SEND_TO_ADAFRUIT=false; 
 
 //Number of samples to average over. (Note we run about once everyone 100ms)
 const unsigned int BUFFER_SIZE = 10; 
@@ -29,7 +29,7 @@ const unsigned int LOAD_CELL_STARTUP_TIME = 2000;
 //    2. Place a known load on your device and make note of the reading (average over ~10-20 readings, may be positive or negative)
 //    3. Set  LOAD_CELL_CALIBRATION_FACTOR = <AVERAGE_READING>/<KNOWN_WEIGHT> and go back to running in #NORMAL mode inside of loop()
 //const float LOAD_CELL_CALIBRATION_FACTOR = 1.0;
-const float LOAD_CELL_CALIBRATION_FACTOR = -99650.0/10.035442;
+const float LOAD_CELL_CALIBRATION_FACTOR = -78147.0/7.94;
 
 const char* FEED_NAME = "patooti-scale";
 
@@ -73,8 +73,8 @@ void loop() {
 
   io.run();
 
-  #define NORMAL 
-  #ifdef NORMAL 
+#define NORMAL 
+#ifdef NORMAL 
   maxWeightCalculator->Update(); 
   if( maxWeightCalculator->HasEvent()) {
     float raw = maxWeightCalculator->GetEvent();     
@@ -85,10 +85,10 @@ void loop() {
       feed->save(raw);
     }
   }
-  #endif
+#endif
 
-  //#define SIMPLE 
-  #ifdef SIMPLE 
+//#define SIMPLE 
+#ifdef SIMPLE 
   //simple mode : Just send raw data every 2 seconds. 
   LoadCell.update();  
   if( millis() > time + 2000 ) {
@@ -101,6 +101,6 @@ void loop() {
     }
     time = millis(); 
   }
-  #endif
+#endif
 
 }
